@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EligirMostrarPublicacionActivity"
+    android:layout_margin="16dp">
+
+    <TextView
+        android:id="@+id/txvMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccione una opción"
+        android:textColor="#7f4f24"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="25sp"
+        app:layout_constraintVertical_bias="0.03"/>
+
+    <RadioGroup
+        android:id="@+id/rgEleccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#7f4f24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txvMensaje"
+        app:layout_constraintVertical_bias="0.10">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="66dp"
+            android:layout_height="41dp"
+            app:srcCompat="@drawable/revista" />
+
+        <RadioButton
+            android:id="@+id/rgRevista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="#7f4f24"
+            android:textStyle="bold"
+            android:text="Revista"/>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="66dp"
+            android:layout_height="41dp"
+            app:srcCompat="@drawable/librocerrado" />
+
+        <RadioButton
+            android:id="@+id/rgLibro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="#7f4f24"
+            android:textStyle="bold"
+            android:text="Libro"/>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="66dp"
+            android:layout_height="41dp"
+            app:srcCompat="@drawable/libros" />
+
+        <RadioButton
+            android:id="@+id/rgAmbos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="#7f4f24"
+            android:textStyle="bold"
+            android:text="Ambos"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnMostrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#936639"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgEleccion"
+        android:text="Mostrar" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
