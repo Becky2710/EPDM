@@ -76,24 +76,18 @@ public class MostrarPublicacionActivity extends AppCompatActivity {
         ArrayList<Publicacion> listaFiltrada = new ArrayList<>();
 
         for (Publicacion publicacion : lstPublicaciones) {
-            switch (eleccion) {
-                case 1:
-                    if (publicacion instanceof Libro) {
-                        listaFiltrada.add(publicacion);
-                    }
-                    break;
-                case 2:
-                    if (publicacion instanceof Revista) {
-                        listaFiltrada.add(publicacion);
-                    }
-                    break;
-                default:
-                    listaFiltrada.add(publicacion);
-                    break;
+            if (eleccion == 1 && publicacion instanceof Libro) {
+                listaFiltrada.add(publicacion);
+            } else if (eleccion == 2 && publicacion instanceof Revista) {
+                listaFiltrada.add(publicacion);
+            } else if (eleccion == 3 && publicacion instanceof Publicacion){
+                listaFiltrada.add(publicacion);
             }
         }
+
         return listaFiltrada;
     }
+
 
 
 
